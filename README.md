@@ -1,1 +1,1 @@
-# -BlockingTelemetryThanksToTheFirewall
+# BlockingTelemetryThanksToTheFirewall

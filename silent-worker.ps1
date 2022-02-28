@@ -1,4 +1,17 @@
 New-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "AllowDesktopAnalyticsProcessing" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "LimitEnhancedDiagnosticDataWindowsAnalytics" -Value "0" -PropertyType "DWord"
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion" -Name "Policies"
+New-Item -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion\Policies" -Name "DataCollection"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" -Name "CommercialId" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" -Name "CommercialDataOptIn" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" -Name "CommercialDataOptIn" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name "AllowDeviceNameInTelemetry" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\DataCollection" -Name "MicrosoftEdgeDataOptIn" -Value "0" -PropertyType "DWord"
+New-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection" -Name "MicrosoftEdgeDataOptIn" -Value "0" -PropertyType "DWord"
+New-Item -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies" -Name "DataCollection"
+New-ItemProperty -Path "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies" -Name "MicrosoftEdgeDataOptIn" -Value "0" -PropertyType "DWord"
 
 Add-Content -Path $env:windir\System32\drivers\etc\hosts -Value "`n0.0.0.0`t4d4a22d4d2d167314abccf8082f0ef35.clo.footprintdns.com" -Force
 Add-Content -Path $env:windir\System32\drivers\etc\hosts -Value "`n0.0.0.0`t315a641cf1db62bed0a344c5b05b2292.clo.footprintdns.com" -Force

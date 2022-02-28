@@ -1,3 +1,5 @@
+New-ItemProperty -Path "HKCU:\Software\Policies\Microsoft\Windows\DataCollection" -Name "AllowTelemetry" -Value "0" -PropertyType "DWord"
+
 Add-Content -Path $env:windir\System32\drivers\etc\hosts -Value "`n0.0.0.0`t4d4a22d4d2d167314abccf8082f0ef35.clo.footprintdns.com" -Force
 Add-Content -Path $env:windir\System32\drivers\etc\hosts -Value "`n0.0.0.0`t315a641cf1db62bed0a344c5b05b2292.clo.footprintdns.com" -Force
 Add-Content -Path $env:windir\System32\drivers\etc\hosts -Value "`n0.0.0.0`t*.telecommand.telemetry.microsoft.com.akadns.net" -Force
